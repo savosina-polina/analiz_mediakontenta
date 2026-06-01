@@ -27,15 +27,13 @@ print(f"[INFO] Инициализация моделей ИИ на устрой�
 yolo_model = YOLO("yolov8n.pt")
 whisper_model = whisper.load_model("base", device=device)
 
-# Ключ лучше хранить в переменной окружения, чтобы не публиковать его в коде.
-# Пример запуска: export OPENROUTER_API_KEY="ваш_ключ"
+
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "ВАШ_OPENROUTER_API_KEY")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 LLM_MODEL = "google/gemini-2.5-flash:free"
 
-# ==========================================
+
 # СХЕМЫ ДАННЫХ
-# ==========================================
 class DetectionClassInput(BaseModel):
     class_: str = Field(..., alias="class")
     subclasses: List[str]
@@ -128,9 +126,8 @@ def preprocess_frame_for_llm(frame):
     return cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
 
 
-# ==========================================
+
 # LLM: АНАЛИЗ ТЕКСТА WHISPER
-# ==========================================
 def analyze_text_with_llm(transcript_segments):
     if not OPENROUTER_API_KEY or OPENROUTER_API_KEY.startswith("ВАШ_"):
         print("[WARN] OpenRouter API ключ не настроен. Текстовый LLM-анализ пропущен.")
@@ -178,9 +175,8 @@ def analyze_text_with_llm(transcript_segments):
     return []
 
 
-# ==========================================
+
 # LLM: ВИЗУАЛЬНЫЙ АНАЛИЗ КАДРОВ GEMINI VISION
-# ==========================================
 def analyze_frame_with_gemini_vision(frame_original, frame_preprocessed, frame_idx, fps):
     """
     Gemini Vision анализирует кадр сам: на вход получает изображения и промпт.
@@ -240,7 +236,6 @@ def analyze_frame_with_gemini_vision(frame_original, frame_preprocessed, frame_i
         response = requests.post(OPENROUTER_URL, headers=headers, json=data, timeout=50)
         if response.status_code == 200:
             parsed = clean_llm_json(response.json()["choices"][0]["message"]["content"])
-            # Фильтр безопасности: пропускаем только разрешенные подклассы и достаточную confidence.
             result = []
             for item in parsed:
                 subclass = item.get("subclass")
@@ -254,9 +249,8 @@ def analyze_frame_with_gemini_vision(frame_original, frame_preprocessed, frame_i
     return []
 
 
-# ==========================================
+
 # ПОЛНЫЙ ГИБРИДНЫЙ КОНВЕЙЕР
-# ==========================================
 def run_heavy_pipeline(job_id: str, video_path: str):
     jobs_db[job_id]["status"] = "IN_PROGRESS"
     jobs_db[job_id]["startedAt"] = datetime.utcnow().isoformat() + "Z"
@@ -361,9 +355,8 @@ def run_heavy_pipeline(job_id: str, video_path: str):
     except Exception as e:
         print(f"[WARN] Ошибка гибридного аудио блока: {e}")
 
-    # ==========================================
+    
     # ПОСТОБРАБОТКА: фильтрация, склейка интервалов, перевод в таймкоды
-    # ==========================================
     def merge_intervals(detections):
         detections = [d for d in detections if d.get("confidence", 0) >= 0.35]
         if not detections:
@@ -417,9 +410,8 @@ def run_heavy_pipeline(job_id: str, video_path: str):
     jobs_db[job_id]["finishedAt"] = datetime.utcnow().isoformat() + "Z"
 
 
-# ==========================================
+
 # ЭНДПОИНТЫ API
-# ==========================================
 @app.post("/api/jobs", status_code=status.HTTP_201_CREATED)
 def create_job(request_data: JobRequest, background_tasks: BackgroundTasks):
     generated_id = str(uuid.uuid4())
