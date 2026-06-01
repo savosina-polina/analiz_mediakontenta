@@ -1,0 +1,171 @@
+{
+  "report_type": "TIME_BASED_REPORT",
+  "source_info": {
+    "frameCount": 5743,
+    "fps": 23.976023976023978,
+    "video_duration_formatted": "00:03:59",
+    "analysis_timestamp": "2026-05-29T16:11:59.662598"
+  },
+  "detections": [
+    {
+      "startFrame": 431,
+      "endFrame": 479,
+      "start_time": "00:00:18",
+      "end_time": "00:00:20",
+      "time_interval": "00:00:18 - 00:00:20",
+      "subclass": "smoking",
+      "confidence": 0.74,
+      "type": "video"
+    },
+    {
+      "startFrame": 494,
+      "endFrame": 632,
+      "start_time": "00:00:20",
+      "end_time": "00:00:26",
+      "time_interval": "00:00:20 - 00:00:26",
+      "subclass": "drugs",
+      "confidence": 0.9,
+      "type": "audio"
+    },
+    {
+      "startFrame": 620,
+      "endFrame": 625,
+      "start_time": "00:00:25",
+      "end_time": "00:00:26",
+      "time_interval": "00:00:25 - 00:00:26",
+      "subclass": "alcohol",
+      "confidence": 0.418,
+      "type": "video"
+    },
+    {
+      "startFrame": 745,
+      "endFrame": 810,
+      "start_time": "00:00:31",
+      "end_time": "00:00:33",
+      "time_interval": "00:00:31 - 00:00:33",
+      "subclass": "alcohol",
+      "confidence": 0.417,
+      "type": "video"
+    },
+    {
+      "startFrame": 791,
+      "endFrame": 841,
+      "start_time": "00:00:32",
+      "end_time": "00:00:35",
+      "time_interval": "00:00:32 - 00:00:35",
+      "subclass": "alcohol",
+      "confidence": 0.88,
+      "type": "audio"
+    },
+    {
+      "startFrame": 1516,
+      "endFrame": 1566,
+      "start_time": "00:01:03",
+      "end_time": "00:01:05",
+      "time_interval": "00:01:03 - 00:01:05",
+      "subclass": "drugs",
+      "confidence": 0.9,
+      "type": "audio"
+    },
+    {
+      "startFrame": 1565,
+      "endFrame": 1570,
+      "start_time": "00:01:05",
+      "end_time": "00:01:05",
+      "time_interval": "00:01:05 - 00:01:05",
+      "subclass": "drugs",
+      "confidence": 0.536,
+      "type": "video"
+    },
+    {
+      "startFrame": 1670,
+      "endFrame": 1695,
+      "start_time": "00:01:09",
+      "end_time": "00:01:10",
+      "time_interval": "00:01:09 - 00:01:10",
+      "subclass": "drugs",
+      "confidence": 0.534,
+      "type": "video"
+    },
+    {
+      "startFrame": 2045,
+      "endFrame": 2050,
+      "start_time": "00:01:25",
+      "end_time": "00:01:25",
+      "time_interval": "00:01:25 - 00:01:25",
+      "subclass": "alcohol",
+      "confidence": 0.377,
+      "type": "video"
+    },
+    {
+      "startFrame": 3525,
+      "endFrame": 3600,
+      "start_time": "00:02:27",
+      "end_time": "00:02:30",
+      "time_interval": "00:02:27 - 00:02:30",
+      "subclass": "drugs",
+      "confidence": 0.837,
+      "type": "video"
+    },
+    {
+      "startFrame": 3620,
+      "endFrame": 3625,
+      "start_time": "00:02:30",
+      "end_time": "00:02:31",
+      "time_interval": "00:02:30 - 00:02:31",
+      "subclass": "smoking",
+      "confidence": 0.501,
+      "type": "video"
+    },
+    {
+      "startFrame": 3835,
+      "endFrame": 3840,
+      "start_time": "00:02:39",
+      "end_time": "00:02:40",
+      "time_interval": "00:02:39 - 00:02:40",
+      "subclass": "smoking",
+      "confidence": 0.467,
+      "type": "video"
+    },
+    {
+      "startFrame": 4970,
+      "endFrame": 4975,
+      "start_time": "00:03:27",
+      "end_time": "00:03:27",
+      "time_interval": "00:03:27 - 00:03:27",
+      "subclass": "smoking",
+      "confidence": 0.482,
+      "type": "video"
+    },
+    {
+      "startFrame": 5435,
+      "endFrame": 5440,
+      "start_time": "00:03:46",
+      "end_time": "00:03:46",
+      "time_interval": "00:03:46 - 00:03:46",
+      "subclass": "alcohol",
+      "confidence": 0.393,
+      "type": "video"
+    },
+    {
+      "startFrame": 5555,
+      "endFrame": 5725,
+      "start_time": "00:03:51",
+      "end_time": "00:03:58",
+      "time_interval": "00:03:51 - 00:03:58",
+      "subclass": "drugs",
+      "confidence": 0.571,
+      "type": "video"
+    }
+  ],
+  "sourceInfo": {
+    "frameCount": 5743,
+    "fps": 23.976023976023978,
+    "video_duration_formatted": "00:03:59",
+    "analysis_timestamp": "2026-05-29T16:11:59.662598",
+    "video_path": "drugs.mp4",
+    "video_duration_seconds": 239.53,
+    "processing_time_seconds": 581.74,
+    "processing_time_formatted": "0:09:41"
+  }
+}
