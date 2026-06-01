@@ -1,0 +1,91 @@
+{
+  "report_type": "TIME_BASED_REPORT",
+  "source_info": {
+    "frameCount": 5743,
+    "fps": 23.976023976023978,
+    "video_duration_formatted": "00:03:59",
+    "analysis_timestamp": "2026-05-29T16:41:38.659703"
+  },
+  "detections": [
+    {
+      "startFrame": 455,
+      "endFrame": 527,
+      "start_time": "00:00:18",
+      "end_time": "00:00:21",
+      "time_interval": "00:00:18 - 00:00:21",
+      "subclass": "drugs",
+      "confidence": 0.92,
+      "type": "audio"
+    },
+    {
+      "startFrame": 604,
+      "endFrame": 642,
+      "start_time": "00:00:25",
+      "end_time": "00:00:26",
+      "time_interval": "00:00:25 - 00:00:26",
+      "subclass": "drugs",
+      "confidence": 0.92,
+      "type": "audio"
+    },
+    {
+      "startFrame": 1510,
+      "endFrame": 1558,
+      "start_time": "00:01:02",
+      "end_time": "00:01:04",
+      "time_interval": "00:01:02 - 00:01:04",
+      "subclass": "drugs",
+      "confidence": 0.92,
+      "type": "audio"
+    },
+    {
+      "startFrame": 598,
+      "endFrame": 621,
+      "start_time": "00:00:24",
+      "end_time": "00:00:25",
+      "time_interval": "00:00:24 - 00:00:25",
+      "subclass": "drugs",
+      "confidence": 0.646,
+      "type": "video"
+    },
+    {
+      "startFrame": 1679,
+      "endFrame": 1702,
+      "start_time": "00:01:10",
+      "end_time": "00:01:10",
+      "time_interval": "00:01:10 - 00:01:10",
+      "subclass": "drugs",
+      "confidence": 0.55,
+      "type": "video"
+    },
+    {
+      "startFrame": 3565,
+      "endFrame": 3611,
+      "start_time": "00:02:28",
+      "end_time": "00:02:30",
+      "time_interval": "00:02:28 - 00:02:30",
+      "subclass": "drugs",
+      "confidence": 0.699,
+      "type": "video"
+    },
+    {
+      "startFrame": 5566,
+      "endFrame": 5589,
+      "start_time": "00:03:52",
+      "end_time": "00:03:53",
+      "time_interval": "00:03:52 - 00:03:53",
+      "subclass": "drugs",
+      "confidence": 0.631,
+      "type": "video"
+    }
+  ],
+  "sourceInfo": {
+    "frameCount": 5743,
+    "fps": 23.976023976023978,
+    "video_duration_formatted": "00:03:59",
+    "analysis_timestamp": "2026-05-29T16:41:38.659703",
+    "video_path": "drugs.mp4",
+    "video_duration_seconds": 239.53,
+    "processing_time_seconds": 296.93,
+    "processing_time_formatted": "0:04:56"
+  }
+}
