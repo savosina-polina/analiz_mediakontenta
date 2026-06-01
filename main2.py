@@ -24,9 +24,7 @@ print(f"[INFO] Инициализация моделей ИИ на устрой�
 yolo_model = YOLO("yolov8n.pt")
 whisper_model = whisper.load_model("base", device=device)
 
-# ==========================================
 # СХЕМЫ ДАННЫХ
-# ==========================================
 class DetectionClassInput(BaseModel):
     class_: str = Field(..., alias="class")
     subclasses: List[str]
@@ -95,9 +93,8 @@ def preprocess_frame(frame):
     return cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
 
 
-# ==========================================
+
 # БАЗОВЫЙ КОНВЕЙЕР БЕЗ GEMINI/LLM
-# ==========================================
 def run_heavy_pipeline(job_id: str, video_path: str):
     jobs_db[job_id]["status"] = "IN_PROGRESS"
     jobs_db[job_id]["startedAt"] = datetime.utcnow().isoformat() + "Z"
@@ -148,7 +145,7 @@ def run_heavy_pipeline(job_id: str, video_path: str):
         frame_idx += 1
     cap.release()
 
-    # Whisper + локальный словарь. Это не LLM, а обычный Python-поиск по ключевым словам.
+    # Whisper + локальный словарь. 
     try:
         audio_results = whisper_model.transcribe(video_path, language="ru")
         drugs_keywords = ["наркотик", "кокаин", "вещества", "ампул", "доза", "шприц", "таблет", "drugs", "порошок"]
